@@ -1,4 +1,6 @@
 import Bill from "./Bill";
+import NumPeople from "./NumPeople";
+import Results from "./Results";
 import SelectTip from "./SelectTip";
 
 export default function App() {
@@ -8,6 +10,10 @@ export default function App() {
         <div className="details">
           <Bill />
           <SelectTip />
+          <NumPeople />
+        </div>
+        <div className="results">
+          <Results />
         </div>
       </div>
     </div>
