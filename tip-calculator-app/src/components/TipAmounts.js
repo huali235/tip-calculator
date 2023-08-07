@@ -6,7 +6,7 @@ export default function TipAmounts() {
       <button className="btn-tip">15%</button>
       <button className="btn-tip">25%</button>
       <button className="btn-tip">50%</button>
-      <input type="text" placeholder="Custom" className="btn-tip" />
+      <input type="text" placeholder="Custom" className="btn-tip btn-custom" />
     </div>
   );
 }

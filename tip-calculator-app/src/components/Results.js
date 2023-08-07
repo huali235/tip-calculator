@@ -1,6 +1,6 @@
 export default function Results() {
   return (
-    <>
+    <div className="results-container">
       <div className="tip-result">
         <p>
           Tip Amount<br></br>
@@ -18,6 +18,6 @@ export default function Results() {
       </div>
 
       <button>Reset</button>
-    </>
+    </div>
   );
 }
