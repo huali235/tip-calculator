@@ -1,4 +1,4 @@
-export default function Results() {
+export default function Results({bill, numPeople}}) {
   return (
     <div className="results-container">
       <div className="tip-result">

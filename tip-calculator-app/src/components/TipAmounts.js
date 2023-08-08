@@ -1,11 +1,21 @@
-export default function TipAmounts() {
+export default function TipAmounts({ tip, onSetTipChange }) {
   return (
     <div className="tip-btns">
-      <button className="btn-tip">5%</button>
-      <button className="btn-tip">10%</button>
-      <button className="btn-tip">15%</button>
-      <button className="btn-tip">25%</button>
-      <button className="btn-tip">50%</button>
+      <button className="btn-tip" value="0.05" onClick={onSetTipChange}>
+        5%
+      </button>
+      <button className="btn-tip" value="0.1" onClick={onSetTipChange}>
+        10%
+      </button>
+      <button className="btn-tip" value="0.15" onClick={onSetTipChange}>
+        15%
+      </button>
+      <button className="btn-tip" value="0.25" onClick={onSetTipChange}>
+        25%
+      </button>
+      <button className="btn-tip" value="0.5" onClick={onSetTipChange}>
+        50%
+      </button>
       <input type="text" placeholder="Custom" className="btn-tip btn-custom" />
     </div>
   );

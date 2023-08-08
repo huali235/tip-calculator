@@ -1,4 +1,4 @@
-export default function Bill() {
+export default function Bill({ bill, onBillChange }) {
   return (
     <div className="bill-container">
       <h4>Bill</h4>
@@ -6,7 +6,8 @@ export default function Bill() {
         className="bill-input"
         type="text"
         placeholder="0"
-        data-icon="icon-dollar"
+        value={bill}
+        onChange={() => onBillChange}
       />
     </div>
   );
