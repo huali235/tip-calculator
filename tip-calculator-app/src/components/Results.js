@@ -1,4 +1,4 @@
-export default function Results({bill, numPeople}}) {
+export default function Results({ bill, numPeople, onReset }) {
   return (
     <div className="results-container">
       <div className="tip-result">
@@ -6,7 +6,7 @@ export default function Results({bill, numPeople}}) {
           Tip Amount<br></br>
           <span className="light-shade">/ person</span>
         </p>
-        <p className="amount">$0.00</p>
+        <p className="amount">${bill}</p>
       </div>
       <div></div>
       <div className="total-result">
@@ -14,10 +14,10 @@ export default function Results({bill, numPeople}}) {
           Total<br></br>
           <span className="light-shade">/ person</span>
         </p>
-        <p className="amount">$0.00</p>
+        <p className="amount">${numPeople}</p>
       </div>
 
-      <button>Reset</button>
+      <button onClick={onReset}>Reset</button>
     </div>
   );
 }

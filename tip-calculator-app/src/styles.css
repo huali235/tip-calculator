@@ -97,11 +97,22 @@ body {
   grid-template-columns: 43% 57%;
   gap: 1rem;
   width: 100%;
-  max-width: 700px;
+  max-width: 800px;
   padding: 2rem;
   background-color: var(--white);
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.message {
+  font-size: 0.8rem;
+  color: red;
 }
 
 .details {
@@ -140,6 +151,10 @@ body {
 
 .btn-custom::placeholder {
   color: var(--dark-grayish-cyan);
+}
+
+.selected {
+  background-color: var(--primary-strong-cyan);
 }
 
 .results {
@@ -191,6 +206,10 @@ body {
   border: 2px solid var(--primary-strong-cyan);
 }
 
+.zero {
+  border: 2px solid red;
+}
+
 .bill-container {
   margin-bottom: 1rem;
 }
@@ -199,6 +218,12 @@ body {
 .num-people-container {
   position: relative;
   display: inline-block;
+}
+
+.title,
+.message {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
 }
 
 .bill-container:after {

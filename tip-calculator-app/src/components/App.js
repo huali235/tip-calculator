@@ -10,15 +10,25 @@ export default function App() {
   const [tip, setTip] = useState(0);
 
   function handleBillChange(e) {
-    setBill(e.target.value);
+    const value = e.target.value;
+    const newBill = value === "" ? "" : parseFloat(value);
+    setBill(newBill);
   }
 
   function handleNumPeopleChange(e) {
-    setNumPeople(e.target.value);
+    const value = e.target.value;
+    const newNumPeople = value === "" ? "" : parseFloat(value);
+    setNumPeople(newNumPeople);
   }
 
   function handleTipChange(e) {
     setTip(e.target.value);
+  }
+
+  function handleReset() {
+    setBill("");
+    setNumPeople("");
+    setTip(0);
   }
   return (
     <div className="app">
@@ -32,7 +42,7 @@ export default function App() {
           />
         </div>
         <div className="results">
-          <Results bill={bill} numPeople={numPeople} />
+          <Results bill={bill} numPeople={numPeople} onReset={handleReset} />
         </div>
       </div>
     </div>
