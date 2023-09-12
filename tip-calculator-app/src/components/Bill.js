@@ -9,8 +9,10 @@ export default function Bill({ bill, onBillChange }) {
       </div>
       <input
         className={inputClass}
-        type="text"
+        type="number"
         placeholder="0"
+        min="0"
+        step="0.01"
         value={bill}
         onChange={onBillChange}
       />

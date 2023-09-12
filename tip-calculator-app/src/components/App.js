@@ -21,8 +21,13 @@ export default function App() {
     setNumPeople(newNumPeople);
   }
 
-  function handleTipChange(e) {
-    setTip(e.target.value);
+  function handleCustomTipChange(e) {
+    const value = e.target.value;
+    setTip(value * 0.01);
+  }
+
+  function handleTipAmountSelect(tipAmount) {
+    setTip(tipAmount);
   }
 
   function handleReset() {
@@ -35,14 +40,23 @@ export default function App() {
       <div className="container">
         <div className="details">
           <Bill bill={bill} onBillChange={handleBillChange} />
-          <SelectTip tip={tip} onSetTipChange={handleTipChange} />
+          <SelectTip
+            tip={tip}
+            onSetCustomTipChange={handleCustomTipChange}
+            onTipAmountSelect={handleTipAmountSelect}
+          />
           <NumPeople
             numPeople={numPeople}
             onNumPeopleChange={handleNumPeopleChange}
           />
         </div>
         <div className="results">
-          <Results bill={bill} numPeople={numPeople} onReset={handleReset} />
+          <Results
+            bill={bill}
+            numPeople={numPeople}
+            tip={tip}
+            onReset={handleReset}
+          />
         </div>
       </div>
     </div>

@@ -10,8 +10,10 @@ export default function NumPeople({ numPeople, onNumPeopleChange }) {
       </div>
       <input
         className={inputClass}
-        type="text"
+        type="number"
         placeholder="0"
+        min="1"
+        defaultValue="1"
         onChange={onNumPeopleChange}
       />
     </div>
